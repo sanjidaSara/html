@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Sara's Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.jpg" class="logo ">
+                <ul>
+                    <li><a href="#"> Home </a></li>
+                    <li><a href="#"> About </a></li>
+                    <li><a href="#"> Services </a></li>
+                    <li><a href="#"> Portfolio </a></li>
+                    <li><a href="#"> Contact </a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>UI/UX Designer</p>
+                <h1>Hi, I'm <span>Sara</span><br>  from Bangladesh.</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- -----about---- -->
+<section>
+    <div id="About">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/person.jpg" width="550">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                        Vel, ullam eum! Delectus deserunt iure nam ex excepturi nostrum?
+                        Ea eveniet deserunt odio laudantium rerum, 
+                        corrupti sequi quae veniam veritatis pariatur.
+                    </p>
+                    <div class="tab-title">
+                        <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App interfaces.</li>
+                            <li><span>Web Development</span><br>Web app Development.</li>
+                            <li><span>App Development</span><br>Building Android/IOS apps.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - current</span><br>trainig at ET inst.</li>
+                            <li><span>2019 - 2022</span><br>Team leader at TechApp.</li>
+                            <li><span>2017-2019</span><br>Inership at Stark.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>Attending BongoDev bootcamp.</li>
+                            <li><span>2022 - current</span><br>Studying CSE in RUET.</li>
+                            <li><span>2020</span><br>HSC from Dhaka Board.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<!-- ----sevices---- -->
+<section>
+    <div id="services">
+        <div class="container">
+            <h1 class="subtitle">My Services</h1>
+            <div class="service-list">
+                
+            </div>
+
+        </div>
+    </div>
+</section>
+<script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-links");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-links");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script>
+
+    
+</body>
+</html>
